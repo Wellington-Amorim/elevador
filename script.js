@@ -29,7 +29,7 @@ const SistemaSom = {
   },
 
   iniciar() {
-    this.sons.fundo.volume = 0.01;
+    this.sons.fundo.volume = 0.05;
     this.sons.fundo.loop = true;
     this.sons.elevadorAndando.volume = 0.4;
     this.sons.portas.volume = 0.2;
