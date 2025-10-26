@@ -17,3 +17,8 @@ https://github.com/Wellington-Amorim/elevador.git
 5. Espere alguns segundos para concluir a instalação
 6. Abra a pasta e encontre o arquivo index.html
 7. Abra o arquivo index.html no seu navegador e pronto
+
+## Visualização rápida
+Acesse o link para visualizar o simulador de elevador no seu navegador: 
+<a href="https://elevadorwas.onrender.com" target="_blank">Simulador de Elevador</a>  
+**Observação:** talvez a página esteja fora do ar ou não funcione corretamente. Nesse caso, recomendo a instalação.  
