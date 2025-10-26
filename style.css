@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/background.jpg) no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+.container {
+  width: 700px;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.container_predio {
+  display: flex;
+  align-items: flex-end;
+}
+
+.predio {
+  background: url(./assets/bg_predio.png);
+  border: 2px solid #111;
+  width: 320px;
+  height: 600px;
+  display: flex;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.container_elevador {
+  background: url(./assets/bg_poco_elevador.png) center/cover no-repeat;
+  border-right: 1px solid #333;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#elevador {
+  background: url(./assets/elevador.png) center/cover no-repeat;
+  border: 1px solid #000;
+  width: 60%;
+  height: 22%;
+  position: absolute;
+  bottom: 8px;
+  transition: transform 2s ease-in-out;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.container_andares {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: url(./assets/bg_container_andares.png) center/cover;
+  border-left: 1px solid #333;
+}
+
+.andares {
+  width: 90%;
+  height: 23%;
+  border: 2px solid #222;
+  background: url("./assets/bg_andares.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.portas {
+  background: url(./assets/elevador.png) center/cover no-repeat;
+  width: 1px;
+  height: 100px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes abrirPorta {
+  from { width: 1px; opacity: 0.6; }
+  to { width: 55px; opacity: 1; }
+}
+
+@keyframes fecharPorta {
+  from { width: 55px; opacity: 1; }
+  to { width: 1px; opacity: 0.6; }
+}
+
+.porta-abrindo {
+  animation: abrirPorta 1s forwards;
+}
+
+.porta-fechando {
+  animation: fecharPorta 1s forwards;
+}
+
+
+#btnContainer {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.btnContainerAndar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(./assets/bg_btnContainerAndar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #000;
+}
+
+.btnAndar {
+  background: linear-gradient(145deg, #444, #222);
+  color: white;
+  border: 1px solid #111;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin: 3px 0;
+  cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+}
+.btnAndar:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+.container_painel {
+  background: url(./assets/bg_painel.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  border: 2px solid #000;
+  border-radius: 12px;
+  width: 250px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+#painel {
+  grid-column: 1 / -1;
+  background-color: #000;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  height: 70px;
+}
+#saidaPainel {
+  font-size: 2rem;
+  font-family: "Bitcount Grid Single", monospace;
+  color: limegreen;
+  text-shadow: 0 0 5px limegreen;
+}
+
+.btnPainel {
+    min-width: 50px;
+  background: url(./assets/btn_painel.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #222;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  transition: all 0.2s;
+}
+.btnPainel:active {
+  filter: brightness(0.6);
+  box-shadow: none;
+}
+
+.container_btnPainel {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.btnPainel.ligado,
+.btnAndar.ligado {
+    box-shadow: 0 0 10px 3px limegreen;
+    filter: brightness(1.5);
+    border-color: limegreen;
+    color: limegreen;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+
+  .container_painel {
+    width: 90%;
+    margin-top: 20px;
+  }
+}

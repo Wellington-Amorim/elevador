@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de elevador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container_predio">
+            <div class="predio">
+                <div class="container_elevador">
+                    <div id="elevador"></div>
+                </div>
+                <div class="container_andares">
+                    <div class="andares">
+                        <div class="portas" id="porta4"></div>
+                    </div>
+                    <div class="andares">
+                        <div class="portas" id="porta3"></div>
+                    </div>
+                    <div class="andares">
+                        <div class="portas" id="porta2"></div>
+                    </div>
+                    <div class="andares">
+                        <div class="portas" id="porta1"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="btnContainer">
+                <div class="btnContainerAndar">
+                    <button type="button" class="btnPainel btnAndar">▼</button>
+                </div>
+                <div class="btnContainerAndar">
+                    <button type="button" class="btnPainel btnAndar">▲</button>
+                    <button type="button" class="btnPainel btnAndar">▼</button>
+                </div>
+                <div class="btnContainerAndar">
+                    <button type="button" class="btnPainel btnAndar">▲</button>
+                    <button type="button" class="btnPainel btnAndar">▼</button>
+                </div>
+                <div class="btnContainerAndar">
+                    <button type="button" class="btnPainel btnAndar">▲</button>
+                </div>
+            </div>
+        </div>
+        <div class="container_painel">
+            <div id="painel"><p id="saidaPainel">INICIAR</p></div>
+            <button type="button" class="btnPainel">4</button>
+            <button type="button" class="btnPainel">3</button>
+            <button type="button" class="btnPainel">2</button>
+            <button type="button" class="btnPainel">1</button>
+            <div class="container_btnPainel">
+                <button type="button" class="btnPainel" onclick="abrirPortasManualmente()">◁▷</button>
+                <button type="button" class="btnPainel" onclick="fecharPortasManualmente()">▷◁</button>
+                <button type="button" class="btnPainel">SOM</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
