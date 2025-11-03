@@ -1,6 +1,6 @@
 ## Simulador de elevador
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/3ac26c73-acd3-42cd-8916-7ea03e4516f0" />
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/3ac26c73-acd3-42cd-8916-7ea03e4516f0" />
 
 * Simula o sistema e funcionalidades de um elevador real
 * Feito em HTML, CSS e JS
